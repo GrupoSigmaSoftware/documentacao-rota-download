@@ -1,10 +1,10 @@
-# Documentação para Requisições à Rota de Download
+# Documentação para Requisições à Rota de leitura de arquivos
 
-A rota `/downloads` fornece a funcionalidade de download de arquivos. Certifique-se de seguir as instruções abaixo para fazer requisições corretas.
+A rota `/downloads` fornece a funcionalidade de ler arquivos presentes no servidor. Certifique-se de seguir as instruções abaixo para fazer requisições corretas.
 
-### Localização dos Arquivos para Download
+### Localização dos Arquivos para leitura
 
-Os arquivos disponíveis para download estão armazenados no servidor `sigmasoftware.com.br`, dentro do diretório `httpdocs`. Ao fazer uma requisição para a rota de download, certifique-se de fornecer o caminho correto para o arquivo desejado dentro desse diretório.
+Os arquivos disponíveis para leitura estão armazenados no servidor `sigmasoftware.com.br`, dentro do diretório `httpdocs`. Ao fazer uma requisição para a rota de leitura, certifique-se de fornecer o caminho correto para o arquivo desejado dentro desse diretório.
 
 ## Autenticação
 
@@ -12,7 +12,7 @@ Antes de fazer qualquer requisição, você precisa incluir um token de autentic
 
 - **Formato do Token:** `Bearer <seu_token_secreto>`
 
-## Requisição para Download de Arquivo
+## Requisição para Leitura de Arquivo
 
 **Método:** GET
 
@@ -20,7 +20,7 @@ Antes de fazer qualquer requisição, você precisa incluir um token de autentic
 
 ### Parâmetros da URL
 
-- **`file` (QueryString):** Nome do arquivo a ser baixado.
+- **`file` (QueryString):** Nome do arquivo a ser visualizado.
 
 ### Exemplo de Requisição (cURL)
 
@@ -30,7 +30,7 @@ curl -H "Authorization: Bearer seu_token_secreto" https://www.sigmasoftware.com.
 
 ## Respostas
 
-- **Sucesso (Código de Status 200):** O arquivo será baixado.
+- **Sucesso (Código de Status 200):** O arquivo será exibido.
 
 - **Erro de Autenticação (Código de Status 401):** Se o token fornecido for inválido.
 
